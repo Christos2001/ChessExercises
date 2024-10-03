@@ -1,6 +1,6 @@
 # ChessExercises
 
-This website uses html & css but the core is in javascript. For this project I used the following libraries chess.js for [chess](https://github.com/jhlywa/chess.js/blob/master/README.md) rules, [chessboard.js](https://chessboardjs.com/) for the chessboard manipulation and animation and [Chess-Ai](https://github.com/zeyu2001/chess-ai) for the computer to be able to play moves.
+This website uses html,css and javascript. For this project I used the following libraries chess.js for [chess](https://github.com/jhlywa/chess.js/blob/master/README.md) rules, [chessboard.js](https://chessboardjs.com/) for the chessboard manipulation and animation and [Chess-Ai](https://github.com/zeyu2001/chess-ai) for the computer to be able to play moves.
 
 
 
