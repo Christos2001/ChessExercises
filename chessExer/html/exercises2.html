@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main/main.css" >
+    <link rel="stylesheet" href="../css/chessboard/chessboard-1.0.0.css">
+    <link rel="stylesheet" href="../css/chessboard/chessboard-1.0.0.min.css">
+    <link rel="shortcut icon" href="#" />
+    <title>Checkmate in 2 moves</title>
+</head>
+<body>
+    <div class="item topnav">
+        <a href="exercises1.html">Exercises 1 move</a>
+        <a href="exercises2.html">Exercises 2 move</a>
+    </div>
+
+    <div id="pawnPromotionForBlack" class="pawnPromotion"><h3>Choose Piece:</h3>
+        &emsp;<button id="nPromB" onclick="nPro()"><img src="../images/chesspieces/wikipedia/bN.png"></button>&emsp;<button id="bPromB" onclick="bPro()"><img src="../images/chesspieces/wikipedia/bB.png"></button>
+        &emsp;<button id="rPromB" onclick="rPro()"><img src="../images/chesspieces/wikipedia/bR.png"></button>&emsp;<button id="qPromB" onclick="qPro()"><img src="../images/chesspieces/wikipedia/bQ.png"></button>
+    </div>
+    <div id="pawnPromotionForWhite" class="pawnPromotion"><h3>Choose Piece:</h3>
+        &emsp;<button id="nPromW" onclick="nPro()"><img src="../images/chesspieces/wikipedia/wN.png"></button>&emsp;<button id="bPromW" onclick="bPro()"><img src="../images/chesspieces/wikipedia/wB.png"></button>
+        &emsp;<button id="rPromW" onclick="rPro()"><img src="../images/chesspieces/wikipedia/wR.png"></button>&emsp;<button id="qPromW" onclick="qPro()"><img src="../images/chesspieces/wikipedia/wQ.png"></button>
+    </div>
+    
+    <div id="table">
+    <div id="switchDiv">
+        <h3 id="hRemoveLock">Disable Locks</h3>
+        <label class="switch">
+        <input id="lockCheck"type="checkbox">
+            <span class="slider round"></span>
+        </label>   
+    </div>
+    
+    <div id="reset"  >
+        
+    </div>
+</div>
+    
+<div id="container">
+    
+        <div id="grid1" class="exer">
+            <div class ="exercise1  column3 row2">
+            <div class="status">LOCKED</div>  
+            <img class="Turn" src="../images/extra/whitebox1.png"  >
+            <img id = "exer1" class="Lock" src="../images/extra/Lock.png">
+            <div id="board1" class="board"></div>
+            <br>
+            <div class="moves1">
+                <label>MOVES PLAYED:</label><br>  
+                <button type="button" class="startBtn">Start Position</button>
+                <button type="button" class="Move1 btn"><p></p></button>
+                <button type="button" class="Move2 btn"><p></p></button>
+                <button type="button" class="Move3 btn"><p></p></button>
+                <button type="button" class="Move4 btn"><p></p></button>
+            </div>
+        </div>
+    </div>
+        <div id="grid2" class="exer"><div class ="exercise1">
+            <div class="status">LOCKED</div>  
+            <img class="Turn" src="../images/extra/whitebox1.png"  >
+            <img id = "exer2" class="Lock" src="../images/extra/Lock.png">
+            <div id="board2" class="board"></div>
+            <br>
+            <div class="moves1">
+                <label>MOVES PLAYED:</label><br>  
+                <button type="button" class="startBtn">Start Position</button>
+                <button type="button" class="Move1 btn"><p></p></button>
+                <button type="button" class="Move2 btn"><p></p></button>
+                <button type="button" class="Move3 btn"><p></p></button>
+                <button type="button" class="Move4 btn"><p></p></button>
+            </div>
+        </div></div>
+        <div id="grid3" class="exer"><div class ="exercise1">
+            <div class="status">LOCKED</div>  
+            <img class="Turn" src="../images/extra/whitebox1.png"  >
+            <img id = "exer3" class="Lock" src="../images/extra/Lock.png">
+            <div id="board3" class="board"></div>
+            <br>
+            <div class="moves1">
+                <label>MOVES PLAYED:</label><br>  
+                <button type="button" class="startBtn">Start Position</button>
+                <button type="button" class="Move1 btn"><p></p></button>
+                <button type="button" class="Move2 btn"><p></p></button>
+                <button type="button" class="Move3 btn"><p></p></button>
+                <button type="button" class="Move4 btn"><p></p></button>
+            </div>
+        </div></div>
+        
+        <div id="grid4" class="exer"><div class ="exercise1">
+            <div class="status">LOCKED</div>  
+            <img class="Turn" src="../images/extra/whitebox1.png"  >
+            <img id = "exer4" class="Lock" src="../images/extra/Lock.png">
+            <div id="board4" class="board"></div>
+            <br>
+            <div class="moves1">
+                <label>MOVES PLAYED:</label><br>  
+                <button type="button" class="startBtn">Start Position</button>
+                <button type="button" class="Move1 btn"><p></p></button>
+                <button type="button" class="Move2 btn"><p></p></button>
+                <button type="button" class="Move3 btn"><p></p></button>
+                <button type="button" class="Move4 btn"><p></p></button>
+            </div>
+        </div></div>
+        <div id="grid5" class="exer"><div class ="exercise1">
+            <div class="status">LOCKED</div>  
+            <img class="Turn" src="../images/extra/whitebox1.png"  >
+            <img id = "exer5" class="Lock" src="../images/extra/Lock.png">
+            <div id="board5" class="board"></div>
+            <br>
+            <div class="moves1">
+                <label>MOVES PLAYED:</label><br>  
+                <button type="button" class="startBtn">Start Position</button>
+                <button type="button" class="Move1 btn"><p></p></button>
+                <button type="button" class="Move2 btn"><p></p></button>
+                <button type="button" class="Move3 btn"><p></p></button>
+                <button type="button" class="Move4 btn"><p></p></button>
+            </div>
+        </div></div>
+        <div id="grid6" class="exer"><div class ="exercise1">
+            <div class="status">LOCKED</div>  
+            <img class="Turn" src="../images/extra/whitebox1.png"  >
+            <img id = "exer6" class="Lock" src="../images/extra/Lock.png">
+            <div id="board6" class="board"></div>
+            <br>
+            <div class="moves1">
+                <label>MOVES PLAYED:</label><br>  
+                <button type="button" class="startBtn">Start Position</button>
+                <button type="button" class="Move1 btn"><p></p></button>
+                <button type="button" class="Move2 btn"><p></p></button>
+                <button type="button" class="Move3 btn"><p></p></button>
+                <button type="button" class="Move4 btn"><p></p></button>
+            </div>
+        </div></div>
+    
+        
+</div>
+<div id = "center">
+    <div id="switchPage"  >
+        <button id="prevPage" onclick="previousPage()">&#60;&#60;Previous Page</button>
+        <button id="page1" class="page" onclick="pageOne()">&ensp;&ensp;1&ensp;&ensp;</button>
+        <button id="page2" class="page" onclick="pageTwo()">&ensp;&ensp;2&ensp;&ensp;</button>
+        <button id="page3" class="page" onclick="pageThree()">&ensp;&ensp;&ensp;3&ensp;&ensp;</button>
+        <button id="nextPage" onclick="nextPage()">&ensp;&ensp;&ensp;&ensp;Next Page&#62;&#62;</button>
+    </div>
+</div>
+
+<footer id='footer'>
+    <span id='copyright'>
+        <p><i>Copyright © </i><a target="_blank" href="https://chessboardjs.com/">Chessboard / chessboard.js</a></p>
+        <p><i>Copyright © </i><a target="_blank" href="https://github.com/jhlywa/chess.js/blob/master/README.md">Chess rules and more / chess.js</a></p>
+        <p><i>Copyright © </i><a target="_blank" href="https://github.com/zeyu2001/chess-ai"> Chess AI /  zeyu2001</a></p>
+    </span>
+    <span id="instagram"><h6>My Instagram</h6><a  target="_blank" href="https://www.instagram.com/chris._.vlassis/">chris._.vlassis<br></a>&ensp;&ensp;&ensp; 
+        <a target="_blank" href="https://www.instagram.com/chris._.vlassis/"> <img src="../images/extra/insta.png" alt="myInstagram"></a></span>
+</footer>
+    
+
+
+
+
+
+    
+</body>
+
+   <!-- jQuery --> 
+   <script
+   src="https://code.jquery.com/jquery-3.5.1.js"
+   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+   crossorigin="anonymous">
+ </script>
+ 
+ <!-- Chessboard JS -->
+ <link rel="stylesheet"
+   href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+   integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+   crossorigin="anonymous">
+
+   <!-- Bootstrap JS --> 
+<script defer
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" 
+integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
+crossorigin="anonymous">
+</script>
+
+ 
+<script src="../javascript/chessboard/chessboard-1.0.0.js"></script>
+<script src="../javascript/chess/chess.js"></script>
+<script src="../javascript/chess/mainAI.js"></script>
+<script src="../javascript/chess/level2.js"></script>
+
+</html>

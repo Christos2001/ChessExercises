@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body{
+    overflow-x: hidden !important;
+    margin:0;
+    padding:0;
+    background:  rgb(153, 124, 89); 
+    height: 100%;
+}
+
+.topnav {
+    background-color: rgb(19, 163,111);
+    overflow: hidden;
+    font-family: 'Roboto';
+    height: 100px;
+    width: 100%;
+}
+.topnav a{
+    float:left;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left:50px;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px; 
+}
+
+.topnav a:hover{
+    color: black;
+    height: 30px;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+.topnav a:active{
+    color:rgb(255, 0, 0);
+}
+#table{
+    background-color: aqua;
+}
+#reset{
+    display: inline-block;
+    position: absolute;
+    margin-top:50px;
+    left:250px;
+    grid-column: 3;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px 30px;
+}
+
+#resetScore{
+    width: 120px;
+    height: 29px;
+    border-radius: 10px 10px;
+    margin:0;
+    color:white;
+    cursor:pointer;
+    background-color: rgb(129, 80, 20);
+
+}
+
+
+#container{ 
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+
+}
+
+.exercise{
+    position: relative;
+    border-style: ridge;
+    border-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3%;
+    border-width: 2px;
+    height:500px;
+    width: 346px;
+    padding: 30px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    background-image:url(../../images/extra/wooden.png);
+    z-index: 0.9;
+}
+
+.exercise1{
+    position: relative;
+    border-style: ridge;
+    border-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3%;
+    border-width: 2px;
+    height:520px;
+    width: 346px;
+    padding: 30px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    background-image:url(../../images/extra/wooden.png);
+    z-index: 0.9;
+}
+
+
+.pawnPromotion{
+    position: fixed;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+    right:  30vh;
+    width: 310px;
+    height: 100px;
+    background-color: white;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.pawnPromotion img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    margin-right: 0px;
+    border:1px solid white;
+}
+
+.pawnPromotion img:hover{
+    border:1px solid black;
+}
+
+
+.Lock{
+    z-index: 1;
+    width: 303px; 
+    position: absolute; 
+    top:70px;
+    right: 2.6vw;
+}
+
+img.Turn{
+    margin: 0;
+    width: 25px ;
+    height: 25px ;
+}
+
+
+#switchDiv{
+    position: absolute;
+    left:50px;
+    margin-top:50px;
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(177, 28, 28);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.startBtn{
+    color:black;
+    height: 40px;
+    width: 110px;
+    margin-left: 0px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom:0px;
+    cursor: pointer;
+}
+
+
+.status{
+    color:white;
+}
+
+.btn{
+    color:black;
+    background-color: white;
+    width: auto;
+    height: 40px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+.btn p{ 
+    font-size: 20px;
+    color:black;
+    margin-right: 15px;
+}
+
+.moves{
+    width: 350px;
+    height: 90px;
+    background-color: white;
+}
+
+.moves1{
+    width: 350px;
+    height: 110px;
+    background-color: white;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 30px ;
+}
+
+
+#switchPage{
+    display: flex;
+    position: relative;
+    justify-content: center;
+  align-items: center;
+    bottom: 0;
+}
+
+#prevPage{
+    background-color: white;
+}
+
+#nextPage{
+    background-color: white;
+}
+
+
+#switchPage button{
+    border: 1px solid black;
+}
+
+#switchPage h5{
+    border: 1px solid black;
+}
+
+.page{
+    background-color: white;
+}
+
+#pages{
+    width: 20px;
+}
+
+/* FOOTER */
+
+#footer{
+    position: relative;
+    bottom:0;
+    color:white;
+    background-color:rgb(19, 163,111);
+    width: 100vw;
+    height: 110px;
+}
+
+footer a:link{
+    color: white;
+}
+
+footer  a:visited {
+    color: white;
+  }
+
+footer  a:hover {
+    color: rgb(220, 228, 228);
+  }
+
+
+#copyright{
+    position:absolute;
+    bottom:0;
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+
+#copyright a{
+    margin-left: 1em;
+}
+
+#instagram{
+    position: absolute;
+    bottom:0;
+    right:80px;
+    padding-bottom: 0;
+    font-weight: bold;
+    color: black;
+}
+#instagram h6{
+    color:rgb(170, 0, 79)
+}
+#instagram img{
+    width: 60px;
+    height: 60px;
+}
+
+#instagram a{
+    color:black;
+}
+
+#instagram a:hover{
+    color:black;
+}
