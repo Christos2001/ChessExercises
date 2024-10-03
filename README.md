@@ -6,11 +6,12 @@ This website uses html & css but the core is in javascript. For this project I u
 
 Through the website the user can solve checkmate puzzles for checkmate in 1 move or 2 moves. The possible outcomes are playable , checkmate , and draw.
 ## Features
-*  The user can unlock puzzles one by one or solve any puzzle they want by choosing to remove Locks.
-Each exercise section has 3 example pages.
-*  The moves played are being written on board and can be cast back.
-*  The moves from solved exercises are saved on local storage
+*  The user can unlock puzzles one _by_ one or solve _any_ puzzle they want by pressing Remove Locks.
+*  Each exercise section has 3 example exercise pages.
+*  The moves played are being _written_ on board and can be cast back.
+*  The moves from solved exercises are saved on local storage.
 
 
-**All pages are in one url and only Fen changes along with board _ _title_ _  _ _color _ _ and _ _moves _ _.**
+All pages are in one url and only Fen changes along with
+* _title_ , _color_ and _moves_
 
