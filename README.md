@@ -12,5 +12,5 @@ Each exercise section has 3 example pages.
 *  The moves from solved exercises are saved on local storage
 
 
-** All pages are in one url and only Fen changes along with board _ _title  _ _color and _ _moves.
+**All pages are in one url and only Fen changes along with board _ _title_ _  _ _color _ _ and _ _moves _ _.**
 
