@@ -44,8 +44,10 @@ function findPage() {
   pages[currentPage - 1].style.backgroundColor = "grey"
 }
 
+//chessboard variables
 
-let level1OriP1 = ['black', 'black', 'white', 'black', 'white', 'black']
+
+let level1OriP1 = ['black', 'black', 'white', 'black', 'white', 'black'] //orientation page 1
 let level1StartFenP1 = [ //chess FEN generator   https://www.dailychess.com/chess/chess-fen-viewer.php -- http://www.netreal.de/Forsyth-Edwards-Notation/index.php
   '1k2r3/ppp5/q3b3/8/8/2B1Q3/PPP5/1KR5 b - - 0 1', 
   '3r4/3r4/8/8/8/k7/p1PB4/2KR4 b - - 0 1',
@@ -115,10 +117,8 @@ window.onload = function () { findPage(); initAllChessboards();}
 function initAllChessboards() {
   checkIfStartPos.fill(true)
   let draggable = null
-  let id = 0
-  if (currentPage == 1) {
-    //pass
-  } else if (currentPage == 2) {
+  let id = 0 //set id for each page
+   if (currentPage == 2) {
     id += 6
   } else if (currentPage == 3) {
     id += 12
@@ -126,11 +126,12 @@ function initAllChessboards() {
 
 
     //for solved exercises
-    if (window.localStorage.getItem('exersSolvedL1') != null) {
+    if (window.localStorage.getItem('exersSolvedL1') != null) {//check from local storage solved exercises if any
       exersSolved = window.localStorage.getItem('exersSolvedL1').split(",")
       for (let i = 0; i < exersSolved.length; i++){
-        exersSolved[i] = JSON.parse(exersSolved[i]) === true
+        exersSolved[i] = JSON.parse(exersSolved[i]) === true //make it boolean (local storage saves it in string format)
       }
+      //Set button for move1 for each solved exersice
       for (let i = 0; i < 6; i++) {
         if (exersSolved[id + i]) {
             if (currentPage == 1) {
@@ -376,29 +377,7 @@ lockCheckBox.addEventListener("click", function () {
 )
 
 
-let pieceMade = null
-function nPro() {
-  pieceMade = "n"
-  closeDiv()
-}
-
-function bPro() {
-  pieceMade = "b"
-  closeDiv()
-}
-
-function rPro() {
-  pieceMade = "r"
-  closeDiv()
-}
-
-function qPro() {
-  pieceMade = "q"
-  closeDiv()
-}
-
-
-function closeDiv() {
+function closePawnPromDivDiv() { //This closes the div for the pawn promotion
 
   let divs = document.querySelectorAll(".pawnPromotion")
   let orientation
@@ -421,6 +400,30 @@ function closeDiv() {
   }
   onDrop(sourceP, targetP, allBoardsDiv[exerToSolve].id, pColor)
 }
+
+
+
+let pieceMade = null
+function nPro() {
+  pieceMade = "n"
+  closePawnPromDivDiv()
+}
+
+function bPro() {
+  pieceMade = "b"
+  closePawnPromDivDiv()
+}
+
+function rPro() {
+  pieceMade = "r"
+  closePawnPromDivDiv()
+}
+
+function qPro() {
+  pieceMade = "q"
+  closePawnPromDivDiv()
+}
+
 
 
 
@@ -554,14 +557,6 @@ let squareClass = 'square-55d63';
 
 function onMouseoverSquare(square, piece, boardID) {
   let id = getNumFromString(boardID) - 1
-
-    // if (currentPage == 1 && exersSolved[id] ) {
-    //   return
-    // } else if (currentPage == 2 && exersSolved[id + 6]) {
-    //   return
-    // } else if (currentPage == 3 && exersSolved[id + 12]){
-    //   return
-    // }
 
   if (locks[id].style.visibility == "hidden") {
     let moves = games[id].moves({
